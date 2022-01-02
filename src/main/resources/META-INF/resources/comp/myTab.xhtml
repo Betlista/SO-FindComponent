@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui"
+	xmlns:composite="http://java.sun.com/jsf/composite">
+
+<composite:interface>
+    <composite:attribute name="data" required="true" type="betlista.so.pf.findComponent.TabData" />
+</composite:interface>
+
+<composite:implementation>
+
+    <div class="ui-g">
+        <div class="ui-g-12">
+            <div class="ui-g-6">
+                <p:outputLabel value="Val 1:"/>
+            </div>
+            <div class="ui-g-6">
+                <p:inputText id="val1" value="#{cc.attrs.data.val1}" widgetVar="#{cc.attrs.data.tabName}-val1"/>
+            </div>
+        </div>
+
+        <div class="ui-g-12">
+            <div class="ui-g-6">
+                <p:outputLabel value="Val 2:"/>
+            </div>
+            <div class="ui-g-6">
+                <p:inputText id="val2" readonly="true" value="#{cc.attrs.data.val2}" widgetVar="#{cc.attrs.data.tabName}-val2"/>
+            </div>
+        </div>
+    </div>
+
+</composite:implementation>
+</html>

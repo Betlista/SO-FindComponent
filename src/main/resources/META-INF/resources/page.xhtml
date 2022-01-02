@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:comp="http://xmlns.jcp.org/jsf/composite/comp">
+
+<h:head>
+    <h:outputScript library="webjars" name="font-awesome/5.5.0/js/all.js"/>
+</h:head>
+
+<h:body styleClass="mainBody">
+
+    <h:form id="form">
+        <p:tabView id="tabView" value="#{tabView.tabsData}" var="tabVar">
+            <p:tab id="tab" title="#{tabVar.tabName}">
+                <comp:myTab data="#{tabVar}" />
+            </p:tab>
+        </p:tabView>
+        <p:commandButton value="Save" action="#{tabView.save()}" process="@form" update="@form" />
+
+        <p:growl id="growl" life="3000"/>
+    </h:form>
+
+</h:body>
+
+</html>

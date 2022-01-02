@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>betlista</groupId>
+    <artifactId>so.pf.find-component</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+
+    <parent>
+        <groupId>org.joinfaces</groupId>
+        <artifactId>jsf-spring-boot-parent</artifactId>
+        <version>2.4.1</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-instrument</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <!-- joinfaces -->
+        <dependency>
+            <groupId>org.joinfaces</groupId>
+            <artifactId>jsf-spring-boot-starter</artifactId>
+        </dependency>
+        <!-- primefaces -->
+        <dependency>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+            <version>6.2</version><!--$NO-MVN-MAN-VER$ -->
+        </dependency>
+        <dependency>
+            <groupId>org.primefaces.extensions</groupId>
+            <artifactId>primefaces-extensions</artifactId>
+            <version>6.2.4</version><!--$NO-MVN-MAN-VER$ -->
+        </dependency>
+        <dependency>
+            <groupId>org.primefaces.themes</groupId>
+            <artifactId>all-themes</artifactId>
+            <version>1.0.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>font-awesome</artifactId>
+            <version>5.5.0</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- spring-boot-maven-plugin -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

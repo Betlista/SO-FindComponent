@@ -1,0 +1,8 @@
+server.port: 9191
+
+jsf:
+  primefaces:
+    theme: casablanca
+
+server:
+  context-path: /findComponent
